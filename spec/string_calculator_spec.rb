@@ -30,4 +30,7 @@ RSpec.describe "#add" do
 	it 'raises an error when negative number is passed' do
     expect{add("//;\n-1;4")}.to raise_error(RuntimeError, "negative numbers not allowed -1")
   end
+	it 'raises an erro when negative numbers are passed' do
+    expect{add("//|\n1|2|-3||-7")}.to raise_error(RuntimeError, "negative numbers not allowed -3,-7")
+  end
 end
