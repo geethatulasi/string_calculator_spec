@@ -21,4 +21,7 @@ RSpec.describe "#add" do
 	it 'return 6 when pass "//[***]\n1***2***3"' do
     expect(add("//[***]\n1***2***3")).to eq(6)
   end
+	it 'return 10 when pass "//|\n1|2|3|4|1001"' do
+    expect(add("//|\n1|2|3|4|1001")).to eq(10)
+  end
 end
