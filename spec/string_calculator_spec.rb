@@ -6,4 +6,7 @@ RSpec.describe "#add" do
 	it 'return 1 when pass "1"' do
     expect(add('1')).to eq(1)
   end
+	 it 'return 3 when pass "1,2"' do
+    expect(add('1,2')).to eq(3)
+  end
 end
