@@ -27,4 +27,7 @@ RSpec.describe "#add" do
 	it 'return 6 when pass "//[*][%]\n1*2%3"' do
     expect(add("//[*][%]\n1*2%3")).to eq(6)
   end
+	it 'raises an error when negative number is passed' do
+    expect{add("//;\n-1;4")}.to raise_error(RuntimeError, "negative numbers not allowed -1")
+  end
 end
